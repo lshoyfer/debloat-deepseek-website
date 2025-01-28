@@ -1,0 +1,90 @@
+/* Opened sidebar "New chat" button outer bg color (there's an inner one that's technically still blue that we hack over with this lazily) */
+.ebaea5d2 > :last-child > :last-child:has(svg) {
+    background-color: grey;
+    width: 100%;
+}
+/* Opened sidebar "New chat" button's outer flexbox */
+[data-ds-dark-theme="dark"] .ebaea5d2 {
+    justify-content: stretch;
+}
+
+/* New chat button at the bottom when inside a chat */
+#root > div > div.c3ecdb44 > div.f2eea526 > div > div.b83ee326 > div > div > div.e886deb9 > div {
+    background-color: grey !important; 
+}
+/* (hover) New chat button at the bottom when inside a chat */
+#root > div > div.c3ecdb44 > div.f2eea526 > div > div.b83ee326 > div > div > div.e886deb9 > div:hover {
+    background-color: #cecdcd !important; 
+    color: black !important;
+    display: flex;
+}
+
+/* Send arrow button when chatting/inputting and there is some text already input */
+#root > div > div.c3ecdb44 > div.f2eea526 > div > div.b83ee326 > div > div > div.cbcaa82c > div.aaff8b8f > div > div > div.ec4f5d61 > div.bf38813a > [aria-disabled="false"] {
+    color: black !important;
+    background-color: white !important;
+}
+
+/* DeepThink (R1) button when in home page and chat context */
+div.ec4f5d61 > :first-child {
+    --ds-button-color: grey !important;
+    --button-border-color: none !important;
+    --button-text-color: white !important;
+    --ds-button-hover-color: #cecdcd !important;
+}
+:root:root div.ec4f5d61 > :first-child  { /* :root:root exists to have greater specificity to Arc's selector so we may override it (they also use !important) */
+/* Fixes Arc Boost bug that over-selects the zap for the Search button, causing display: None to also apply to the DeepThink (R1) button. */
+    display: flex !important;
+}
+/* (hover) DeepThink (R1) button when in home page and chat context */
+div.ec4f5d61 > :first-child:hover {
+    --button-text-color: black !important;
+
+    --boost-hover-color: black;
+}
+
+div.ec4f5d61 > :first-child:has([style="font-size: 19px; width: 19px; height: 19px; color: rgb(76, 174, 255);"]) {
+    --boost-r1-is-enabled: rgb(0, 217, 255);
+}
+/* (hover) DeepThink (R1) button svg icon when in home page and chat context */
+div.ec4f5d61 > :first-child > div > span > div {
+    color: var(--boost-hover-color, var(--boost-r1-is-enabled)) !important;
+}
+
+/* Closed sidebar profile button */
+#root > div > div.c3ecdb44 > div.dc04ec1d.a02af2e6 > div.a7f3a288.f0d4f23d > .boost-hover-wrapper:last-child {
+    /* Fixes Arc Boost bug that over-selects the zap for the closed sidebar mobile button, causing display: None to also apply to the 
+       profile button when the home button is injected */
+    display: flex !important;
+
+    /* Equivalent spacing to what's between the "Open Sidebar" and "New Message" buttons is 58.89px although I think because the top buttons
+       are smaller, it gives a visual illusion of being different at this setting when it's actually not, but it may just be my own delusions. */
+    /* Distance between visible top of profile svg to visible bottom of home svg: 8px padding + 8px padding + 58.89px margin -> 74.89px */
+    /* Distance between visible top of new chat svg to visible bottom of sidebar svg: 6.51px (fake) padding + 8.38px (fake) padding + 60px -> 74.89px*/
+    margin-top: 58.89px;
+}
+
+/* See applyClosedSidebarHomeButton() function in main.js for details */
+.boost-hover-wrapper {
+    padding: 8px;
+    border-radius: 12px;
+}
+/* See applyClosedSidebarHomeButton() function in main.js for details */
+.boost-hover-wrapper:hover {
+    background-color: rgb(51 51 51);
+}
+
+/* deepseek icon logo when llm is responding back to you in chat context */
+.eb23581b.dfa60d66 {
+    display: none !important;
+}
+
+/* user text in history of chat context */
+.fbb737a4 {
+    background-color: rgb(60, 60, 60) !important;
+}
+
+/* text input box when in a chat context */
+.cbcaa82c {
+    padding-bottom: 20px; /* emulates space created by "AI-generated, for reference-only" text that previously existed */
+}

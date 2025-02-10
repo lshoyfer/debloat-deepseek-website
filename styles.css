@@ -88,3 +88,13 @@ div.ec4f5d61 > :first-child > div > span > div {
 .cbcaa82c {
     padding-bottom: 20px; /* emulates space created by "AI-generated, for reference-only" text that previously existed */
 }
+
+/* Home text and r1 button container */
+#root > div > div.c3ecdb44 > div.f2eea526 > div > div > div.a2f8e4bb > div.aaff8b8f.eb830e32 > div > div {
+    border-radius: 10px !important;
+}
+
+/* Home text input box hidden height container */
+#root > div > div.c3ecdb44 > div.f2eea526 > div > div > div.a2f8e4bb > div.aaff8b8f.eb830e32 > div > div > div.fad49dec > div {
+    min-height: 35px !important;
+}

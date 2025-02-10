@@ -96,8 +96,6 @@ const initUserStyles = () => {
     const applyChatInputStylesAndState = () => {
         const chatInput = document.getElementById(inputPlaceHolderSel);
         chatInput.placeholder = 'Input';
-        chatInput.parentElement.style.height = "35px";  // FIXME move this to CSS
-        chatInput.parentElement.parentElement.style.borderRadius = "10px" // FIXME move this to CSS
 
         if (ENABLE_R1_ON_EVERY_PAGE_LOAD_OR_RELOAD) {
             const deepThinkButton = document.querySelector("div.ec4f5d61 > div:first-child");

@@ -1,3 +1,6 @@
+I still prefer Grok3/ChatGPT to R1. Archiving it.
+
+---
 This repo contains some user CSS and JS for an opinionated "debloat" of the deepseek website (https://chat.deepseek.com/).
 
 It is intended for Arc Browser's boost system and exclusively tested on that browser, but the code is intentionally designed to work outside of boosts and on other browsers (as long as they are relatively modern and updated ones), although again is currently untested in that regard.
